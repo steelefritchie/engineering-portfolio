@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OMEGA Recovery Bay — Steele Fritchie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Custom inline overrides to adapt style.css perfectly for a single project layout */
+  .project-detail-hero {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4rem) var(--gap) 0;
+  }
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--steel);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  .back-link:hover { color: var(--brass); }
+  
+  .project-body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4rem) var(--gap);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--gap);
+  }
+  .project-main-content h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+  }
+  .project-main-content p {
+    color: #353846;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .gallery-grid img {
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  @media (max-width: 800px) {
+    .project-body { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html#top" class="brand">
+      <span class="brand-mark">⌖</span>
+      <span class="brand-name">Steele Fritchie</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="files/FRITCHIE_STEELE_RESUME.pdf" class="nav-resume">Résumé ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-detail-hero">
+    <a href="index.html#projects" class="back-link">← BACK TO DRAWING BOARD</a>
+    <p class="title-block-label">SHEET 03.2 — SPECIFIC PROJECT INFORMATION</p>
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem);">OMEGA - Recovery Bay</h1>
+  </section>
+
+  <section class="project-body">
+    
+    <div class="project-main-content">
+      <img src="images/omegarecbay2.jpg" alt="Main Recovery Bay Assembly" style="border: 1px solid var(--line); width: 100%;">
+      
+      <h3>Engineering Challenge</h3>
+      <p>
+        Last year's communication systems suffered from RF signal interference 
+        resulting from several possible sources. This called for a redesign of 
+        avionics systems this year. All components on the LORA mesh network were 
+        moved to the fiberglass nosecone section which allows RF transparency. 
+        Last year's design of the recovery bay utilized screw switches to activate altimeters which 
+        suffered from reliability issues and were difficult to operate. Rotational 
+        and G forces caused the screws to rotate in flight and compromise the system's 
+        reliability. We were also made aware that IREC judges prefer having two different
+        branded altimeters for redundancy.
+      </p>
+      
+      <h3>The Solution & Iterative Design</h3>
+      <p>
+        Integrating the major design decisions determined from last year's model 
+        resulted in a sleek, intuitive design which makes it easy to understand 
+        component and wire pathing, allowing for easy access and maintenance. 
+        The structural components were custom modeled using SolidWorks and printed 
+        using high-durability PETG-CF filaments to combat high G-forces, prevent 
+        moisture ingress, and ensure structural integrity in hot Texas temperatures 
+        at competition. The electronics include altimeters (One Missileworks RRC3 and 
+        One Altus Metrum EasyMini), pull pins to replace last year's screw switches, 
+        and batteries which activate mechanical separation stages for Omega's 
+        dual-deployment recovery system.
+      </p>
+
+      <div class="gallery-grid">
+        <img src="images/omegarecbaySWConcept.jpg" alt="Recovery Bay Concept" onerror="this.style.background='#eee'; this.style.height='200px'">
+        <img src="images/omegarecbaySW.jpg" alt="Recovery Bay SW Model" onerror="this.style.background='#eee'; this.style.height='200px'">
+        <img src="images/omegarecbaydrawing.jpg" alt="Recovery Bay Drawing" onerror="this.style.background='#eee'; this.style.height='200px'">
+      </div>
+
+      <p>
+        A engineering drawing, concept, and the final SolidWorks assembly model of the recovery bay are shown above.
+      </p>
+
+      <div class="gallery-grid">
+        <img src="images/omegarecbay.jpg" alt="Recovery Bay Side 1" onerror="this.style.background='#eee'; this.style.height='200px'">
+        <img src="images/omegarecbay2.jpg" alt="Recovery Bay Side 2" onerror="this.style.background='#eee'; this.style.height='200px'">
+      </div>
+
+      <p>
+        Pictures of each side of the recovery bay are shown above.
+      </p>
+
+      <h3>Flight Performance & Results</h3>
+      <p>
+      The system has performed well in several test flights. During our Sub-Scale 
+      launch to 5,000 feet the system deployed both the main and drogue parachutes 
+      at apogee, when main is supposed to be deployed at 1,200 feet. This was a result
+      of using the FeatherWeight BlueRaven altimeter for the first time. The mobile app 
+      was not analyzed with enough depth and we missed a setting which caused the misfire. 
+      At our 10,000 foot FullScale launch the system failed to deploy one of the main chute 
+      charges. This was a result of people not familiar with the electronic systems its 
+      housing coupler while attempting to attach the main chute to the reccovery yoke located
+      on a bulkhead, which when assembling cut a wire to the chargewell, resulting in the 
+      failed charge deployment. The electronic system was properly configured and it was not
+      an avionics issue. At competition the coupler was assembled by me and worked exactly as 
+      intended during the competition launch, where all four charges deployed at appropriate
+      altitudes.
+      </p>
+    </div>
+
+    <aside class="project-sidebar">
+      <div class="hero-spec" style="background: #fff; position: sticky; top: 100px;">
+        <div class="spec-row"><span style="text-transform: uppercase; font-size: 0.7rem; color: var(--steel);" colspan="2">System Specifications</span></div>
+        <div class="spec-row"><span>ROLE</span><span>Recovery Avionics</span></div>
+        <div class="spec-row"><span>TIMELINE</span><span>2025 - 2026</span></div>
+        <div class="spec-row"><span>TOOLS</span><span>SolidWorks, 3D Printing, Wiring, Soldering</span></div>
+        <div class="spec-row"><span>MATERIAL</span><span>PETG-CF Filament</span></div>
+        <div class="spec-row"><span>STATUS</span><span>Used in Flight</span></div>
+        <div class="spec-row" style="padding: 1.25rem 1rem;">
+          <a href="https://github.com/steelefritchie" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.75rem;">Source Repo ↗</a>
+        </div>
+      </div>
+    </aside>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Steele Fritchie. Built from scratch.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

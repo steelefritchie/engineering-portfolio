@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity Avionics Bay — Steele Fritchie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Custom inline overrides to adapt style.css perfectly for a single project layout */
+  .project-detail-hero {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4rem) var(--gap) 0;
+  }
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--steel);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+  .back-link:hover { color: var(--brass); }
+  
+  .project-body {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: clamp(2rem, 6vw, 4rem) var(--gap);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--gap);
+  }
+  .project-main-content h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.5rem;
+  }
+  .project-main-content p {
+    color: #353846;
+    margin-bottom: 1.2rem;
+    line-height: 1.6;
+  }
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+  .gallery-grid img {
+    border: 1px solid var(--line);
+    background: #fff;
+  }
+  @media (max-width: 800px) {
+    .project-body { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html#top" class="brand">
+      <span class="brand-mark">⌖</span>
+      <span class="brand-name">Steele Fritchie</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="files/FRITCHIE_STEELE_RESUME.pdf" class="nav-resume">Résumé ↓</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="project-detail-hero">
+    <a href="index.html#projects" class="back-link">← BACK TO DRAWING BOARD</a>
+    <p class="title-block-label">SHEET 03.1 — SPECIFIC PROJECT INFORMATION</p>
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.5rem);">Omega - Avionics Bay</h1>
+  </section>
+
+  <section class="project-body">
+    
+    <div class="project-main-content">
+      <img src="images/omegaavbay.jpg" alt="Omega Avionics Bay" style="border: 1px solid var(--line); width: 100%;">
+      
+      <h3>Engineering Challenge</h3>
+      <p>
+        Last year's communication systems suffered from RF signal interference 
+        resulting from several possible sources. This called for a redesign of 
+        avionics systems this year. All components on the LORA mesh network were 
+        moved to the fiberglass nosecone section which allows RF transparency and 
+        reduced the number of needed antennas. 
+        The previous year's nosecone avionics bay was very cluttered with antennas 
+        and components which made it difficult to maintain and repair. 
+      </p>
+
+      <div class="gallery-grid">
+        <img src="images/trinitynoseconebay.jpg" alt="Trinity Nosecone Bay" onerror="this.style.background='#eee'; this.style.height='200px'">
+      </div>
+      
+      <p>
+        The image above shows the previous year's nosecone avionics bay.
+      </p>
+
+      <h3>The Solution & Iterative Design</h3>
+      <p>
+       With the added
+        components and reduced antennas the bay was redesigned to fit all of the
+        necessary components in a more efficient and maintainable layout, following
+        a siimilar redesign approach as seen in the Trinity Avionics Bay for wire
+        management, and using pull pins to activate the GoPro and Custom Flight Computer.
+      </p>
+
+        <div class="gallery-grid">
+        <img src="images/omegaavbaySW.jpg" alt="Omega Avionics Bay SolidWorks Model" onerror="this.style.background='#eee'; this.style.height='200px'">
+        <img src="images/omegaavbaydrawing.jpg" alt="Omega Avionics Bay Drawing" onerror="this.style.background='#eee'; this.style.height='200px'">
+      </div>
+
+      <p>
+        The final SolidWorks model and drawing are shown above.
+      </p>
+
+      <div class="gallery-grid">
+        <img src="images/omegaavbay.jpg" alt="Omega Avionics Bay" onerror="this.style.background='#eee'; this.style.height='200px'">
+        <img src="images/omegaavbay2.jpg" alt="Omega Avionics Bay Side 2" onerror="this.style.background='#eee'; this.style.height='200px'">
+      </div>
+
+      <p>
+        Both sides of the wired physical model used in the IREC Omega rocket are shown above.
+      </p>
+
+      <h3>Flight Performance & Results</h3>
+      <p>
+        Unfortunate circumstances meant that we could not use the previously planned for 
+        433 Mhz Yagi antennas for telemetry purposes. The night before our competition launch 
+        backup antennas were swapped onto the avionics bay. At competition we were able to borrow 
+        a 433 Mhz Yagi antenna from another team, but had to move to the forward telemetry position 
+        to get GPS lock on the rocket, which is required for launch. We also started running into 
+        an issue where one of the USB-C ports on the Custom Flight Computer which connected to the 
+        GoPro was popping off. After soldering it twice before competition it was able to give the 
+        GoPro the necessary power on and off command, but when being drug across the desert floor by 
+        high winds, popped back off and was found disconnected. The flight computer also somehow had 
+        its physical boot switch turned on, which caused the flight computer to not boot properly when 
+        pull pins were removed, so no telemetry data was received on the ground station. Data was, however, 
+        logged to a physical SD drive so all flight data was preserved. Further steps are being taken 
+        to address the issues encountered.
+      </p>
+    </div>
+
+    <aside class="project-sidebar">
+      <div class="hero-spec" style="background: #fff; position: sticky; top: 100px;">
+        <div class="spec-row"><span style="text-transform: uppercase; font-size: 0.7rem; color: var(--steel);" colspan="2">System Specifications</span></div>
+        <div class="spec-row"><span>ROLE</span><span>Flight Computer & GPS Avionics</span></div>
+        <div class="spec-row"><span>TIMELINE</span><span>2024-25</span></div>
+        <div class="spec-row"><span>TOOLS</span><span>SolidWorks, 3D Printing, Wiring, Soldering</span></div>
+        <div class="spec-row"><span>MATERIAL</span><span>PETG-CF Filament</span></div>
+        <div class="spec-row"><span>STATUS</span><span>Used in Flight</span></div>
+        <div class="spec-row" style="padding: 1.25rem 1rem;">
+          <a href="https://github.com/steelefritchie" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center; font-size: 0.75rem;">Source Repo ↗</a>
+        </div>
+      </div>
+    </aside>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Steele Fritchie. Built from scratch.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
